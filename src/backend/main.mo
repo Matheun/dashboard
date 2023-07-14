@@ -1,16 +1,13 @@
-import Principal "mo:base/Principal";
-
-// actor {
-//   public query func greet(name : Text) : async Text {
-//     return "Hello, " # name # "!";
-//   };
-// };
-
 actor {
-  public query (message) func greet() : async Text {
-    return "Hello, " # Principal.toText(message.caller) # "!";
-  };
-};
+  stable var user : Text = "";
 
-// let actor = GreetActor;
-// GreetActor;
+  public func greet(name : Text) : async Text {
+    user := name;
+    return "Hello, " # name # "!";
+  };
+
+  public func getUser() : async Text {
+    return user;
+  };
+
+};
