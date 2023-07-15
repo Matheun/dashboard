@@ -10,20 +10,26 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import ChevronRight from '@mui/icons-material/ChevronRight';
+import { Height } from "../../../../node_modules/@mui/icons-material/index";
 
 
-export function Home() {
-  const openInCurrentTab = (url) => {
-    window.open(url, "_self", "noreferrer");
-  };
+export function ExternalSitePage({ src }) {
   return (
     <Box sx={{ flexGrow: 1, padding: 2 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
+          <iframe style={{ height: '100vh' }}
+            src={src}>
+          </iframe>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
             Ready to leap into the future?
           </Typography>
         </Grid>
+        {/* <Grid>
+          <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          </iframe>
+        </Grid> */}
         <Grid item xs={12} style={{ paddingTop: 0 }}>
           <Typography variant="body1">
             Unlock the full potential of the blockchain revolution. Learn DFINITY provides an
@@ -37,7 +43,7 @@ export function Home() {
             Resources
           </Typography>
           <List>
-            <ListItem disablePadding onClick={() => openInCurrentTab("https://www.youtube.com/DFINITY")}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="Educational videos" />
                 <IconButton edge="end">
@@ -45,7 +51,7 @@ export function Home() {
                 </IconButton>
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding onClick={() => openInCurrentTab("https://www.womeninblockchaincanada.com/")}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="Quizes" />
                 <IconButton edge="end">
@@ -53,7 +59,7 @@ export function Home() {
                 </IconButton>
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding onClick={() => openInCurrentTab("https://www.womeninblockchaincanada.com/")}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="Earn NFT certificates" />
                 <IconButton edge="end">
@@ -61,7 +67,7 @@ export function Home() {
                 </IconButton>
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding onClick={() => openInCurrentTab("https://dfinity.org/events-and-news/")}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="News" />
                 <IconButton edge="end">
@@ -69,7 +75,7 @@ export function Home() {
                 </IconButton>
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding onClick={() => openInCurrentTab("https://dfinity.org/events-and-news/")}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemText primary="Events" />
                 <IconButton edge="end">
