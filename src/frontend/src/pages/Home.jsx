@@ -76,6 +76,14 @@ export function Home() {
                 </IconButton>
               </ListItemButton>
             </ListItem>
+            <ListItem disablePadding onClick={() => openInCurrentTab("https://t.me/+HQTY4RWsbNcyOTM5")}>
+              <ListItemButton>
+                <ListItemText primary="Get in touch" />
+                <IconButton edge="end">
+                  <ChevronRight />
+                </IconButton>
+              </ListItemButton>
+            </ListItem>
           </List>
         </Grid>
       </Grid>
