@@ -1,7 +1,6 @@
 import * as React from "react";
 import { backend } from "../../../declarations/backend";
 import { AuthClient } from "@dfinity/auth-client";
-import { HttpAgent, Actor, ActorFactory } from "@dfinity/agent";
 
 import Button from '@mui/material/Button';
 

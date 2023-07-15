@@ -1,5 +1,4 @@
 import * as React from "react";
-import { backend } from "../../../declarations/backend";
 
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -47,7 +46,7 @@ export function Home() {
             </ListItem>
             <ListItem disablePadding onClick={() => openInCurrentTab("https://www.womeninblockchaincanada.com/")}>
               <ListItemButton>
-                <ListItemText primary="Quizes" />
+                <ListItemText primary="Quizzes" />
                 <IconButton edge="end">
                   <ChevronRight />
                 </IconButton>
